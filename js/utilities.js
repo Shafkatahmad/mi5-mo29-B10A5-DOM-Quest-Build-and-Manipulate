@@ -11,3 +11,6 @@ function isValidAmount(input, modal) {
     modalId.showModal();
   }
 }
+
+// making the isValidAmount function global for reusable code
+window.isValidAmount = isValidAmount;
