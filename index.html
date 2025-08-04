@@ -54,18 +54,22 @@
 
       <!-- banner -->
       <div class="flex justify-center gap-4 py-8">
-        <button class="bg-[#B4F461] text-xl font-semibold px-8 py-4 rounded-lg">
+        <button
+          id="donation-tab"
+          class="bg-[#B4F461] text-xl font-semibold px-8 py-4 rounded-lg"
+        >
           Donation
         </button>
         <button
-          class="text-gray-500 text-xl font-medium px-8 py-4 rounded-lg border border-gray-400"
+          id="history-tab"
+          class="bg-gray-100 text-gray-500 text-xl font-medium px-8 py-4 rounded-lg"
         >
           History
         </button>
       </div>
     </header>
 
-    <main class="flex flex-col gap-8 mb-20">
+    <main id="main" class="flex flex-col gap-8 mb-20">
       <div class="flex w-5/6 mx-auto border border-gray-300 rounded-2xl p-8">
         <div class="lg:flex gap-8 rounded-xl">
           <img class="sm:mb-4" src="./assets/noakhali.png" alt="" />
@@ -75,7 +79,7 @@
               <img src="./assets/coin.png" alt="" />
               <p><span id="noakhali-donated-amount">0</span> BDT</p>
             </div>
-            <h3 class="text-xl font-bold mb-4">
+            <h3 id="noakhali-title" class="text-xl font-bold mb-4">
               Donate for Flood at Noakhali, Bangladesh
             </h3>
             <p class="text-gray-500 text-lg font-light mb-6">
@@ -131,7 +135,7 @@
               <img src="./assets/coin.png" alt="" />
               <p><span id="feni-donated-amount">600</span> BDT</p>
             </div>
-            <h3 class="text-xl font-bold mb-4">
+            <h3 id="feni-title" class="text-xl font-bold mb-4">
               Donate for Flood Relief in Feni,Bangladesh
             </h3>
             <p class="text-gray-500 text-lg font-light mb-6">
@@ -190,7 +194,7 @@
               <img src="./assets/coin.png" alt="" />
               <p><span id="quota-donated-amount">2400</span> BDT</p>
             </div>
-            <h3 class="text-xl font-bold mb-4">
+            <h3 id="quota-title" class="text-xl font-bold mb-4">
               Aid for Injured in the Quota Movement
             </h3>
             <p class="text-gray-500 text-lg font-light mb-6">
@@ -240,12 +244,11 @@
     </main>
 
     <!-- History Section -->
-    <section id="history">
+    <section id="history" class="hidden w-5/6 mx-auto">
       <!-- border border-gray-300 rounded-lg p-8 mb-5 -->
-      <div id="history-list" class="w-5/6 mx-auto"></div>
     </section>
 
-    <footer class="bg-green-50 h-36"></footer>
+    <footer id="footer" class="bg-green-50 h-36"></footer>
 
     <script src="./js/utilities.js"></script>
     <script src="./js/index.js"></script>
