@@ -1,4 +1,4 @@
-function isValidAmount(input, modal, donateAmount) {
+function isValidAmount(input, modal, donateAmount, title) {
   const inputAmount = document.getElementById(input).value;
   const amount = parseFloat(inputAmount);
 
@@ -26,16 +26,15 @@ function isValidAmount(input, modal, donateAmount) {
   const modalId = document.getElementById(modal);
   modalId.showModal();
 
+  const titleElement = document.getElementById(title).innerText
 
-  // else {
-  //   const modalId = document.getElementById(modal);
-  //   const currentBalance = document.getElementById('current-balance');
-  //   const newBalance = currentBalance - donateAmount;
-  //   currentBalance.innerText = newBalance.toFixed(2);
-  //   const donateTotal = amount + donateAmount;
-  //   document.getElementById('noakhali-donated-amount').innerText = donateTotal.toFixed(2);
-  //   modalId.showModal();
-  // }
+  const historyItem = document.createElement('div');
+  historyItem.className = "border border-gray-300 rounded-lg p-8 mb-5";
+  historyItem.innerHTML = `
+  <p class="text-xl font-bold mb-4">${amount.toFixed(2)} Taka is Donated for ${titleElement}</p>
+  <p class="text-sm font-light">Date: ${new Date().toString()}</p>
+  `
+  document.getElementById('history').appendChild(historyItem);
 }
 
 // making the isValidAmount function global for reusable code
