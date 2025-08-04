@@ -46,7 +46,7 @@
           <div class="navbar-end flex gap-3">
             <img src="./assets/coin.png" alt="" />
             <p class="hidden lg:flex gap-1 text-gray-600 text-xl">
-              <span>5500</span> BDT
+              <span id="current-balance">5500</span> BDT
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@
             <!-- sub donate -->
             <div class="flex bg-gray-100 gap-2 w-fit px-4 py-3 rounded-lg mb-4">
               <img src="./assets/coin.png" alt="" />
-              <p><span>0</span> BDT</p>
+              <p><span id="noakhali-donated-amount">0</span> BDT</p>
             </div>
             <h3 class="text-xl font-bold mb-4">
               Donate for Flood at Noakhali, Bangladesh
@@ -94,8 +94,8 @@
             />
             <!-- Open the modal using ID.showModal() method -->
             <button
+              id="button-donate-1"
               class="btn bg-[#B4F461] w-full py-6 rounded-lg"
-              onclick="isValidAmount('donate-input-1', 'my_modal_1')"
             >
               Donate Now
             </button>
@@ -129,7 +129,7 @@
             <!-- sub donate -->
             <div class="flex bg-gray-100 gap-2 w-fit px-4 py-3 rounded-lg mb-4">
               <img src="./assets/coin.png" alt="" />
-              <p><span>600</span> BDT</p>
+              <p><span id="feni-donated-amount">600</span> BDT</p>
             </div>
             <h3 class="text-xl font-bold mb-4">
               Donate for Flood Relief in Feni,Bangladesh
@@ -153,8 +153,8 @@
 
             <!-- Open the modal using ID.showModal() method -->
             <button
+              id="button-donate-2"
               class="btn bg-[#B4F461] w-full py-6 rounded-lg"
-              onclick="isValidAmount('donate-input-2', 'my_modal_2')"
             >
               Donate Now
             </button>
@@ -188,7 +188,7 @@
             <!-- sub donate -->
             <div class="flex bg-gray-100 gap-2 w-fit px-4 py-3 rounded-lg mb-4">
               <img src="./assets/coin.png" alt="" />
-              <p><span>2400</span> BDT</p>
+              <p><span id="quota-donated-amount">2400</span> BDT</p>
             </div>
             <h3 class="text-xl font-bold mb-4">
               Aid for Injured in the Quota Movement
@@ -212,9 +212,8 @@
             />
             <!-- Open the modal using ID.showModal() method -->
             <button
-              id="button-donate"
+              id="button-donate-3"
               class="btn bg-[#B4F461] w-full py-6 rounded-lg"
-              onclick="isValidAmount('donate-input-3', 'my_modal_3')"
             >
               Donate Now
             </button>
